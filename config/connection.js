@@ -1,4 +1,12 @@
 const mysql = require("mysql");
+const greeting =
+`######## ##     ## ########  ##        #######  ##    ## ######## ########    ##     ##    ###    ##    ##    ###     ######   ######## ########  
+##       ###   ### ##     ## ##       ##     ##  ##  ##  ##       ##          ###   ###   ## ##   ###   ##   ## ##   ##    ##  ##       ##     ## 
+##       #### #### ##     ## ##       ##     ##   ####   ##       ##          #### ####  ##   ##  ####  ##  ##   ##  ##        ##       ##     ## 
+######   ## ### ## ########  ##       ##     ##    ##    ######   ######      ## ### ## ##     ## ## ## ## ##     ## ##   #### ######   ########  
+##       ##     ## ##        ##       ##     ##    ##    ##       ##          ##     ## ######### ##  #### ######### ##    ##  ##       ##   ##   
+##       ##     ## ##        ##       ##     ##    ##    ##       ##          ##     ## ##     ## ##   ### ##     ## ##    ##  ##       ##    ##  
+######## ##     ## ##        ########  #######     ##    ######## ########    ##     ## ##     ## ##    ## ##     ##  ######   ######## ##     ##`;
 
 const connection = mysql.createConnection({
   host: "localhost",
@@ -13,7 +21,8 @@ connection.connect(function(err) {
     console.error("error connecting: " + err.stack);
     return;
   }
-  console.log("connected as id " + connection.threadId);
+  console.log("Connected as id:", connection.threadId, "\n");
+  console.log(greeting);
 });
 
 module.exports = connection;
