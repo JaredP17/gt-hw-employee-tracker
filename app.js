@@ -1,3 +1,2 @@
-// require packages and db files
-// run inquirer prompt
-// get values
+const orm = require("./config/orm.js");
+const inquirer = require("inquirer");
