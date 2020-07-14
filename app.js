@@ -1,4 +1,4 @@
-const { orm, connection } = require("./config/orm.js");
+const orm = require("./config/orm.js");
 const logo = require("asciiart-logo");
 const table = require("console.table");
 const inquirer = require("inquirer");
@@ -58,7 +58,7 @@ function init() {
       default:
         // Exit application
         console.log("Exiting application...\n");
-        connection.end();
+        orm.exit();
         break;
     }
   });
