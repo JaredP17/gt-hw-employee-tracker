@@ -21,6 +21,7 @@
   "homepage": "https://github.com/JaredP17/gt-hw-employee-tracker#readme",
   "dependencies": {
     "asciiart-logo": "^0.2.6",
+    "console.table": "^0.10.0",
     "inquirer": "^7.3.0",
     "mysql": "^2.18.1"
   }

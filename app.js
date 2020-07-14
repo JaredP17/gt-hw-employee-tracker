@@ -1,7 +1,9 @@
-const logo = require("asciiart-logo");
 const orm = require("./config/orm.js");
+const logo = require("asciiart-logo");
+const table = require('console.table');
 const inquirer = require("inquirer");
 const prompt = inquirer.createPromptModule();
+
 
 function init() {
   console.log(logo({ name: "Employee Manager" }).render());
