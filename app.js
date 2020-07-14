@@ -1,10 +1,14 @@
-const orm = require("./config/orm.js");
+const { orm, connection } = require("./config/orm.js");
 const logo = require("asciiart-logo");
-const table = require('console.table');
+const table = require("console.table");
 const inquirer = require("inquirer");
 const prompt = inquirer.createPromptModule();
 
+// Run
+init();
 
+// Functions
+// Initialize application
 function init() {
   console.log(logo({ name: "Employee Manager" }).render());
   prompt([
@@ -25,10 +29,37 @@ function init() {
       name: "choice",
     },
   ]).then((data) => {
+    // Get user choice from data
     const { choice } = data;
+    // console.log(data);
 
-    
+    switch (choice) {
+      case "VIEW":
+        break;
+
+      case "VIEW_DEP":
+        break;
+
+      case "VIEW_MGR":
+        break;
+
+      case "ADD":
+        break;
+
+      case "REMOVE":
+        break;
+
+      case "UD_ROLE":
+        break;
+
+      case "UD_MGR":
+        break;
+
+      default:
+        // Exit application
+        console.log("Exiting application...\n");
+        connection.end();
+        break;
+    }
   });
 }
-
-init();

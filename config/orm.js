@@ -6,8 +6,6 @@ const connection = require("./connection.js");
 // The ? signs are for swapping out other values
 // These help avoid SQL injection
 // https://en.wikipedia.org/wiki/SQL_injection
-var orm = {
+const orm = {};
 
-};
-
-module.exports = orm;
+module.exports = { orm, connection };
